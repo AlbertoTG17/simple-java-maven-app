@@ -28,12 +28,6 @@ pipeline {
             }
         }
 
-	stage('Deliver') {
-            steps {
-                sh 'sudo ./jenkins/scripts/deliver.sh'	
-            }
-        }
-
 	stage('Example') {
             input {
                 message "Should we continue?"
@@ -47,6 +41,14 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you!!."
             }
         }
+
+	stage('Deliver') {
+            steps {
+                sh 'sudo ./jenkins/scripts/deliver.sh'	
+            }
+        }
+
+	
 
 
 	
