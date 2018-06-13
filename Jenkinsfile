@@ -32,7 +32,7 @@ pipeline {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
-                submitter "alice,bob"
+                //submitter "alice,bob"
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
@@ -40,6 +40,12 @@ pipeline {
             steps {
                 echo "Hello, ${PERSON}, nice to meet you!!."
             }
+	    post{
+		always{
+		     echo 'I always say Hello'
+		}
+	    }
+	    
         }
 
 	stage('Deliver') {
