@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+                      
+	<changeSet author="atostado" id="V6">
+		<comment>Changeset generado por includes</comment>
+		<createTable remarks="Used to store user's information"
+			tableName="usuarios">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="email" type="varchar(100)" />
+			<column name="phone" type="int" />
+			<column name="address" type="int">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<insert tableName="usuarios">
+			<column name="id" valueNumeric="1" />
+			<column name="name" value="Soumitra" />
+			<column name="email" value="contact@jeejava.com" />
+			<column name="phone" valueNumeric="1234567890" />
+			<column name="address" valueNumeric="1" />
+		</insert>
+		<insert tableName="usuarios">
+			<column name="id" valueNumeric="2" />
+			<column name="name" value="Rushikesh" />
+			<column name="email" value="contact@jeejava.com" />
+			<column name="phone" valueNumeric="1234567891" />
+			<column name="address" valueNumeric="2" />
+		</insert>
+	</changeSet>
+	
+</databaseChangeLog> 

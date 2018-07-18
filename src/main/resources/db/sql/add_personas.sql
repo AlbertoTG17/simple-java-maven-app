@@ -1,0 +1,1 @@
+insert into personas values (1, 'Moyo', 'Monkey', 'moyo@gmail.com');

@@ -39,6 +39,8 @@ pipeline {
             }
             steps {
                 echo "Hello, ${PERSON}, nice to meet you!!."
+                echo "Integrating liquibase"
+                sh 'mvn liquibase:status'
             }
 	    post{
 		always{
