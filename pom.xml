@@ -90,12 +90,12 @@
 					<propertyFile>src/main/resources/db/liquibase.properties</propertyFile>
 				</configuration>
 				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>update</goal>
-						</goals>
-					</execution>
+<!-- 					<execution> -->
+<!-- 						<phase>package</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>update</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
 				</executions>
 			</plugin>
 		</plugins>
